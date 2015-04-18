@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore>
+    <shelf>
+        <book id="01">
+            <name>what</name>
+            <author>me</author>
+        </book>
+        <book id="02">
+            <name>hehe</name>
+            <author>her</author>
+        </book>
+    </shelf>
+</bookstore>
