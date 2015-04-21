@@ -1,9 +1,12 @@
 package cn.seu.edu;
 
+import cn.seu.edu.gui.GWindow;
 import cn.seu.edu.sax.DomNode;
+import cn.seu.edu.sax.DomTree;
 import cn.seu.edu.sax.Parser;
 
 import java.io.File;
+import java.util.ArrayList;
 
 /**
  * Created by giles on 2015/4/19.
@@ -11,9 +14,13 @@ import java.io.File;
 public class TestSAXParser {
 
     public static void main(String[] args) {
-        //Parser parser = new Parser();
-        Parser parser = new Parser();
-        DomNode body = parser.parseAll(new File("source.xml"));
-        parser.DFSPrintDom(body);
+
+        Parser parser = new Parser(new File("source.xml"));
+        DomTree domTree = parser.parseAll();
+        domTree.DFSPrintDom();
+//        new GWindow();
+        ArrayList<DomNode> res = parser.search("author");
+        System.out.println("found");
+        System.out.println(res.size());
     }
 }
