@@ -1,8 +1,6 @@
 package cn.seu.edu.sax;
 
 
-import com.sun.java.browser.plugin2.DOM;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -287,6 +285,5 @@ public class Parser {
 ////            System.out.println("null body");
 //        return domTree.body;
 //    }
-
 
 }
