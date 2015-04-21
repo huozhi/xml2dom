@@ -1,6 +1,8 @@
 package cn.seu.edu.gui;
 
 
+import cn.seu.edu.sax.DomNode;
+import cn.seu.edu.sax.DomTree;
 import cn.seu.edu.sax.Parser;
 
 import javax.swing.*;
@@ -33,6 +35,11 @@ public class GWindow extends JFrame {
 
     public GWindow() {
         init();
+    }
+
+    public void reinit() {
+        parser = new Parser();
+
     }
 
     public void init() {
@@ -83,7 +90,12 @@ public class GWindow extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // search
-                
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        searchWorker();
+                    }
+                }).start();
             }
         });
 
@@ -91,6 +103,12 @@ public class GWindow extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // parse dom
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        parseDomWorker();
+                    }
+                }).start();
             }
         });
 
@@ -107,39 +125,54 @@ public class GWindow extends JFrame {
             pane.add(rows.get(i));
     }
 
-    public void setLayout() {
+    protected void searchWorker() {
+        reinit();
+        String path = pathField.getText();
+        String key = keysField.getText();
+        parser.setFile(path);
+        parser.parseAll();
+        ArrayList<DomNode> res = parser.search(key);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Count of Dom Node Found: ");
+        sb.append(res.size());
+        sb.append("\n");
+        for (DomNode n : res) {
+            sb.append(n.DFSPrintDom());
+            sb.append("\n");
+        }
+
+        logArea.setText(sb.toString());
+    }
+
+    protected void parseDomWorker() {
+        reinit();
+        String path = pathField.getText();
+        keysField.setText("------------");
+        parser.setFile(path);
+        DomTree domTree = parser.parseAll();
+
+        logArea.setText(domTree.DFSPrintDom());
+    }
+
+
+
+    protected void setLayout() {
         constraints.gridwidth = 24;
         constraints.gridheight = 2;
         constraints.gridx = 0;
         constraints.gridy = 0;
 
-//        rows.add(new JPanel());
         layout.setConstraints(rows.get(0), constraints);
-//        rows.add(new JPanel());
         constraints.gridy = 3;
         layout.setConstraints(rows.get(1), constraints);
-//        rows.add(new JPanel());
         constraints.gridy = 5;
         layout.setConstraints(rows.get(2), constraints);
-//        rows.add(new JPanel());
         constraints.gridy = 7;
         constraints.gridheight = 4;
-//        constraints.gridwidth = 24;
         layout.setConstraints(rows.get(3), constraints);
-//        constraints.gridy = 9;
-//        rows.add(new JPanel());
-//        layout.setConstraints(rows.get(4), constraints);
     }
 
-//    public void actionPerformed(ActionEvent e) {
-//        if (e.getSource() == selectButton) {
-//            inChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-//            int ret = inChooser.showOpenDialog(this);
-//            if (ret == JFileChooser.APPROVE_OPTION) {
-//                pathField.setText(inChooser.getSelectedFile().getParent());
-//            }
-//        }
-//    }
+
 
 
 }

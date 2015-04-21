@@ -26,9 +26,13 @@
         <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/DomNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+              <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1131#1132#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/DomTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -47,13 +51,13 @@
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5">
-              <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+            <state vertical-scroll-proportion="31.142857">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#501#502#0" expanded="true" />
                 <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#855#864#0" expanded="true" />
+                <element signature="e#856#865#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,10 +66,14 @@
       <file leaf-file-name="GWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/gui/GWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6899767">
-              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+            <state vertical-scroll-proportion="2.1468532">
+              <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2484#2485#0" expanded="true" />
+                <element signature="e#2546#2547#0" expanded="true" />
+                <element signature="e#2885#2886#0" expanded="true" />
+                <element signature="e#2949#2950#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/TestSAXParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,10 +121,11 @@
         <option value="$PROJECT_DIR$/src/cn/seu/edu/gui/ParserForm.form" />
         <option value="$PROJECT_DIR$/src/cn/seu/edu/gui/GForm.form" />
         <option value="$PROJECT_DIR$/src/cn/seu/edu/sax/DomNodeType.java" />
-        <option value="$PROJECT_DIR$/src/cn/seu/edu/sax/DomTree.java" />
         <option value="$PROJECT_DIR$/src/cn/seu/edu/TestSAXParser.java" />
         <option value="$PROJECT_DIR$/src/cn/seu/edu/sax/Parser.java" />
+        <option value="$PROJECT_DIR$/src/cn/seu/edu/sax/DomNode.java" />
         <option value="$PROJECT_DIR$/src/cn/seu/edu/gui/GWindow.java" />
+        <option value="$PROJECT_DIR$/src/cn/seu/edu/sax/DomTree.java" />
       </list>
     </option>
   </component>
@@ -492,6 +501,10 @@
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -512,7 +525,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#855#864#0" expanded="true" />
+            <element signature="e#856#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -539,6 +552,10 @@
           <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+            <element signature="e#2885#2886#0" expanded="true" />
+            <element signature="e#2949#2950#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -559,6 +576,10 @@
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -579,7 +600,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#855#864#0" expanded="true" />
+            <element signature="e#856#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -590,6 +611,10 @@
           <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+            <element signature="e#2885#2886#0" expanded="true" />
+            <element signature="e#2949#2950#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -610,6 +635,10 @@
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -630,7 +659,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#855#864#0" expanded="true" />
+            <element signature="e#856#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -641,6 +670,10 @@
           <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+            <element signature="e#2885#2886#0" expanded="true" />
+            <element signature="e#2949#2950#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -669,6 +702,10 @@
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -689,7 +726,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#855#864#0" expanded="true" />
+            <element signature="e#856#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -726,6 +763,10 @@
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -746,7 +787,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#855#864#0" expanded="true" />
+            <element signature="e#856#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,10 +834,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/DomNodeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26573426">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/DomNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/TestSAXParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -806,48 +869,34 @@
     <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/DomTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/DomNodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26573426">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="39" />
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/sax/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5">
-          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+        <state vertical-scroll-proportion="31.142857">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#855#864#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/TestSAXParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#856#865#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/seu/edu/gui/GWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6899767">
-          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+        <state vertical-scroll-proportion="2.1468532">
+          <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+            <element signature="e#2885#2886#0" expanded="true" />
+            <element signature="e#2949#2950#0" expanded="true" />
           </folding>
         </state>
       </provider>

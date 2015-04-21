@@ -59,4 +59,33 @@ public class DomNode {
     public boolean isLeaf() {
         return children.isEmpty();
     }
+
+    public String DFSPrintDom() {
+        StringBuilder sb = new StringBuilder();
+        DFSPrintDom(this, 0, sb);
+
+        return sb.toString();
+    }
+
+    public void DFSPrintDom(DomNode root, int layer, StringBuilder sb) {
+        if (root != null) {
+            for (int i = 0; i < layer; i++) {
+                System.out.print(" ");
+                sb.append(" ");
+            }
+            sb.append(root.name + " ");
+            System.out.printf("%s ", root.name);
+            if (root.value != null && root.value != null) {
+                System.out.println(root.value);
+                sb.append(root.value);
+            }
+            else {
+                System.out.println();
+            }
+            sb.append("\n");
+            for (int i = 0; i < root.children.size(); i++) {
+                DFSPrintDom(root.children.get(i), layer + 1, sb);
+            }
+        }
+    }
 }

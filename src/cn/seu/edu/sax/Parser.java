@@ -27,6 +27,7 @@ public class Parser {
     }
 
     public Parser(File file) {
+
         setFile(file.getAbsolutePath());
         init();
     }
