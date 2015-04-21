@@ -19,6 +19,7 @@ public class TestSAXParser {
         Parser parser = new Parser();
         parser.setFile("group.xml");
         DomTree domTree = parser.parseAll();
+        domTree.head.DFSPrintDom();
         domTree.body.DFSPrintDom();
         ArrayList<DomNode> res = parser.search("member");
         System.out.println("found");
