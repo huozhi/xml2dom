@@ -1,6 +1,5 @@
 package cn.seu.edu.sax;
 
-import com.sun.java.browser.plugin2.DOM;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +14,7 @@ import java.util.Stack;
 public class Parser {
 //    Scanner fileSc;
     Scanner tokenSc;
-    Scanner sc;
+//    Scanner sc;
     File file;
     DomTree domTree;
     DomNode currNode = null;
@@ -33,7 +32,7 @@ public class Parser {
     }
 
     public DomTree parseAll() {
-        domTree.head = parseHead();
+//        domTree.head = parseHead();
         domTree.body = parseBody();
 
         return domTree;
@@ -72,6 +71,8 @@ public class Parser {
         this.file = new File(path);
         try {
             tokenSc = new Scanner(file);//.useDelimiter("\\ |\\>");
+            tokenSc.useDelimiter("\\ |\\>|\\?\\>");
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -81,10 +82,10 @@ public class Parser {
 
     protected DomNode parseHead() {
         boolean finish = false;
-        tokenSc.useDelimiter("\\ |\\>|\\?\\>");
         while (tokenSc.hasNext() && !finish) {
             String token = tokenSc.next(); // read current token
-            if (token.isEmpty() || token.equals("\n")) continue;
+            System.out.println("head: " + token);
+            if (token.isEmpty() || token.matches("(?s).*[\\n\\r].*")) continue;
 
             currType = getType(token);
             if (currType == DomNodeType.HEAD) {
@@ -100,7 +101,8 @@ public class Parser {
                 break;
             }
         }
-//        }
+//        if (domTree.head == null)
+//            System.out.println("null head");
         return domTree.head;
     }
 
@@ -110,13 +112,14 @@ public class Parser {
             if (token.startsWith("<?")) {
                 return DomNodeType.HEAD;
             }
-            else if (token.charAt(token.length() - 1) == '?') {
+            else if (token.charAt(token.length() - 1) == '?' ||
+                    token.startsWith("</")) {
                 return DomNodeType.END;
             }
             else if (token.contains("=")) {
                 return DomNodeType.ATTR;
             }
-            else if (token.charAt(0) == '<' && token.charAt(1) != '/') {
+            else if (token.charAt(0) == '<') {
                 return DomNodeType.START;
             }
             else {
@@ -125,6 +128,7 @@ public class Parser {
         } catch (Exception e) {
             e.printStackTrace();
         }
+//        System.out.println("ROOT " + token);
         return DomNodeType.END.ROOT;
     }
 
@@ -138,13 +142,15 @@ public class Parser {
         boolean finish = false;
         if (tokenSc.hasNext()) {
             String token = tokenSc.next(); // read current token
+            System.out.println("token: " + token);
+
             if (token.isEmpty() || token.matches("(?s).*[\\n\\r].*")) {
                 return new DomNode("", DomNodeType.EMPTY);
             }
-            System.out.println(token);
 
             currType = getType(token);
             if (currType == DomNodeType.START) {
+                System.out.println("start: " + token);
                 currNode = new DomNode(token.substring(1), currType);
                 DomNode parent = stk.peek();
 
@@ -154,18 +160,24 @@ public class Parser {
 
             }
             else if (currType == DomNodeType.ATTR) {
+                System.out.println("attr: " + token);
                 String[] pair = parseAttr(token);
                 currNode.setAttr(pair[0], pair[1]);
             }
             else if (currType == DomNodeType.END) {
+                System.out.println("end: " + token);
                 // close parsing header node
                 String[] tks;
                 tks = token.split("</");
-                if (tks.length > 1 && !tks[0].isEmpty()) {
+                if (tks.length > 1 && tks[0].matches("[a-zA-Z]+")) {
+                    System.out.println("values");
+                    for (String s : tks)
+                        System.out.print(s + ",");
+                    System.out.println("\n" + (currNode == null ? "null" : "full"));
                     currNode.value = tks[0];
                 }
                 if (!stk.empty()) {
-                    stk.pop();
+                    currNode = stk.pop();
                 }
             }
         }
@@ -177,6 +189,8 @@ public class Parser {
 
     public DomNode parseBody() {
         while (process() != null) { }
+//        if (domTree.body == null)
+//            System.out.println("null body");
         return domTree.body;
     }
 

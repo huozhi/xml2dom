@@ -15,12 +15,13 @@ public class TestSAXParser {
 
     public static void main(String[] args) {
 
-        new GWindow();
-//        Parser parser = new Parser(new File("source.xml"));
-//        DomTree domTree = parser.parseAll();
-//        domTree.DFSPrintDom();
-//        ArrayList<DomNode> res = parser.search("author");
-//        System.out.println("found");
-//        System.out.println(res.size());
+//        new GWindow();
+        Parser parser = new Parser();
+        parser.setFile("group.xml");
+        DomTree domTree = parser.parseAll();
+        domTree.body.DFSPrintDom();
+        ArrayList<DomNode> res = parser.search("member");
+        System.out.println("found");
+        System.out.println(res.size());
     }
 }
