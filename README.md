@@ -24,7 +24,6 @@ FastSAX
 
 ### About
 
-[中文README](https://github.com/lavende/FastSAX/blob/master/README.zh-CN.md)
 
 This is a non-validating SAX parser for XML written in JAVA. Parse XML and output like the DOM readable style.
 
