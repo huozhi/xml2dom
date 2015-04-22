@@ -12,14 +12,6 @@ public class DomTree {
         this.root = new DomNode();
     }
 
-    public DomTree(DomNode root) {
-        this.root = root;
-    }
-
-    public void insertNode(DomNode node) {
-        root.appendChild(node);
-    }
-
     public String DFSPrintDom() {
         StringBuilder sb = new StringBuilder();
         sb.append("Dom Header\n");
@@ -33,7 +25,7 @@ public class DomTree {
     public void DFSPrintDom(DomNode root, int layer, StringBuilder sb) {
         if (root != null) {
             for (int i = 0; i < layer; i++) {
-                System.out.print(" ");
+                System.out.print("  ");
                 sb.append(" ");
             }
             sb.append(root.name + " ");

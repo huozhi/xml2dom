@@ -26,7 +26,6 @@ public class DomNode {
     public DomNode(String name, DomNodeType type) {
         this.name = name;
         this.type = type;
-//        this.layer = layer;
         init();
     }
 
@@ -35,13 +34,12 @@ public class DomNode {
         this.name = name;
         this.value = value;
         this.type = type;
-//        this.layer = layer;
         init();
     }
 
     public void init() {
-        this.children = new ArrayList<DomNode>();
-        this.attrs = new HashMap<String, String>();
+        this.children = new ArrayList<>();
+        this.attrs = new HashMap<>();
     }
 
     public void setAttr(String key, String value) {

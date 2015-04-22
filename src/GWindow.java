@@ -1,6 +1,3 @@
-package cn.seu.edu.gui;
-
-
 import cn.seu.edu.sax.DomNode;
 import cn.seu.edu.sax.DomTree;
 import cn.seu.edu.sax.Parser;
@@ -15,14 +12,10 @@ import java.util.ArrayList;
  * Created by giles on 2015/4/20.
  */
 public class GWindow extends JFrame {
-//    public JFrame this;
-//    public JFileChooser inChooser;
-//    public JFileChooser outChooser;
+
     public JTextField pathField;
     public JTextField keysField;
-//    public JButton selectButton;
     public JButton searchButton;
-//    public JButton submitButton;
     public JButton getDomButton;
     public JTextArea logArea;
 
@@ -86,30 +79,18 @@ public class GWindow extends JFrame {
         searchButton = new JButton("Find");
         getDomButton = new JButton("Dom Tree");
 
-        searchButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // search
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        searchWorker();
-                    }
-                }).start();
-            }
+        searchButton.addActionListener(e -> {
+            // search
+            new Thread(() -> {
+                searchWorker();
+            }).start();
         });
 
-        getDomButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // parse dom
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        parseDomWorker();
-                    }
-                }).start();
-            }
+        getDomButton.addActionListener(e -> {
+            // parse dom
+            new Thread(() -> {
+                parseDomWorker();
+            }).start();
         });
 
         rows.add(new JPanel());
@@ -171,8 +152,4 @@ public class GWindow extends JFrame {
         constraints.gridheight = 4;
         layout.setConstraints(rows.get(3), constraints);
     }
-
-
-
-
 }
