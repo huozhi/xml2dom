@@ -1,9 +1,9 @@
-FastSAX
+XML2Dom
 ------
 
 ### 中文简介
 
-这是一个非验证型的用java为XML写的SAX解析器，还在修改，可以解析well-formed的XML文档，读取属性，格式化输出整个XML文档
+这是一个非验证型的用java为XML写的解析器，可以解析well-formed的XML文档，读取属性，格式化输出整个XML文档
 
 好久没写Java了，呜呼... 要好好思考一下Java的设计，感觉完全面向对象的语言很需要设计模式来支撑它完成更复杂的工作
 
@@ -25,6 +25,6 @@ FastSAX
 ### About
 
 
-This is a non-validating SAX parser for XML written in JAVA. Parse XML and output like the DOM readable style.
+This is a non-validating parser for XML written in JAVA. Parse XML and output like the DOM readable style.
 
 Have been not using Java for a while... Aha, It's a friendly language. And I thought that we should combine the practice of **design pattern** with building applications by pure oritened language such as Java.
